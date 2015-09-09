@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Twitters!</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @t.each do |x| %>
+      <tr>
+        <td><%= x.message %></td>
+        <td><%= x.user.username %></td>
+        <td><%= link_to 'Show', x, class: "btn btn-custom"%></td>
+        <td><%= link_to 'Edit', edit_tweet_path(x), class: "btn btn-custom" %></td>
+        <td><%= link_to 'Destroy', x, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-custom" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tweet', new_tweet_path, class: "btn btn-custom" %>
