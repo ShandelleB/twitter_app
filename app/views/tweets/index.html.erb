@@ -14,7 +14,7 @@
     <% @t.each do |x| %>
       <tr>
         <td><%= x.message %></td>
-        <td><%= x.user.username %></td>
+        <td> <%= link_to x.user.username, user_profile_path(id: x.user.id) %> </td>        
         <td><%= link_to 'Show', x, class: "btn btn-custom"%></td>
         <td><%= link_to 'Edit', edit_tweet_path(x), class: "btn btn-custom" %></td>
         <td><%= link_to 'Destroy', x, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-custom" %></td>
