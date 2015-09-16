@@ -18,7 +18,7 @@
 }
 
 .jumbotron {
-    background-color: #55ACEE;
+    background-color: #77ABD3;
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -26,8 +26,9 @@
 
 body {
     font-family: Lato;
-    color: grey;
-    background-color: #CCFFFF;
+    color: #153649;
+    background: url("/assets/clouds.jpg") no-repeat;
+    background-size: cover;
 }
 
 .alignright {
@@ -35,7 +36,8 @@ body {
 }
 
 .btn-custom {
-    background-color: #55ACEE;
+    background-color: grey;
+    color: #153649;
 }
 
 .navbar-default {
